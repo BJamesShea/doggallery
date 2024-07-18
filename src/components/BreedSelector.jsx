@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const BreedSelector = () => {
+const BreedSelector = ({ onBreedChange }) => {
   const [breeds, setBreeds] = useState([]);
   const [selectedBreed, setSelectedBreed] = useState("");
 
@@ -18,7 +18,9 @@ const BreedSelector = () => {
   }, []);
 
   const handleChange = (event) => {
-    setSelectedBreed(event.target.value);
+    const breed = event.target.value;
+    setSelectedBreed(breed);
+    onBreedChange(breed);
   };
 
   return (

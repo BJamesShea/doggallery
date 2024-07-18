@@ -1,4 +1,4 @@
-function Button({ text, color, onClick, onAdd }) {
+function Button({ text, color, onAdd }) {
   return (
     <button style={{ backgroundColor: color }} className="btn" onClick={onAdd}>
       {text}
