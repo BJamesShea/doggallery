@@ -8,6 +8,11 @@ import ImageGallery from "./components/ImageGallery";
 function App() {
   const [selectedBreed, setSelectedBreed] = useState("");
   const [imageUrls, setImageUrls] = useState([]);
+  const [numImages, setNumImages] = useState(1);
+
+  const handleNumImagesChange = (e) => {
+    setNumImages(Number(e.target.value));
+  };
 
   const handleBreedChange = (breed) => {
     setSelectedBreed(breed);
@@ -16,11 +21,11 @@ function App() {
   const handleGenerateClick = async () => {
     if (selectedBreed) {
       try {
-        const responses = await Promise.all([
-          fetch(`https://dog.ceo/api/breed/${selectedBreed}/images/random`),
-          fetch(`https://dog.ceo/api/breed/${selectedBreed}/images/random`),
-          fetch(`https://dog.ceo/api/breed/${selectedBreed}/images/random`),
-        ]);
+        const responses = await Promise.all(
+          Array.from({ length: numImages }, () =>
+            fetch(`https://dog.ceo/api/breed/${selectedBreed}/images/random`)
+          )
+        );
         const data = await Promise.all(
           responses.map((response) => response.json())
         );
@@ -34,10 +39,27 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <Header title="Puppy Gallery" text="By: Brandon Shea" />
+    <div className="App">
+      <Header
+        title="Dog Image Gallery"
+        text="Select a breed and generate images"
+      />
       <BreedSelector onBreedChange={handleBreedChange} />
-      <Button text="Generate" color="lightblue" onAdd={handleGenerateClick} />
+      <div>
+        <label htmlFor="numImages">Number of Images: </label>
+        <select
+          id="numImages"
+          value={numImages}
+          onChange={handleNumImagesChange}
+        >
+          {Array.from({ length: 100 }, (_, i) => (
+            <option key={i + 1} value={i + 1}>
+              {i + 1}
+            </option>
+          ))}
+        </select>
+      </div>
+      <Button onClick={handleGenerateClick} text="Generate" />
       <ImageGallery imageUrls={imageUrls} />
     </div>
   );

@@ -11,7 +11,7 @@ const BreedSelector = ({ onBreedChange }) => {
         const data = await response.json();
         setBreeds(Object.keys(data.message));
       } catch (error) {
-        console.error("Error fetching breeds".error);
+        console.error("Error fetching breeds", error);
       }
     };
     fetchBreeds();
@@ -20,7 +20,9 @@ const BreedSelector = ({ onBreedChange }) => {
   const handleChange = (event) => {
     const breed = event.target.value;
     setSelectedBreed(breed);
-    onBreedChange(breed);
+    if (typeof onBreedChange === "function") {
+      onBreedChange(breed);
+    }
   };
 
   return (
