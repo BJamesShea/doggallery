@@ -2,7 +2,7 @@ import React from "react";
 
 const ImageGallery = ({ imageUrls }) => {
   if (!imageUrls || !Array.isArray(imageUrls) || imageUrls.length === 0) {
-    return <div>No images available</div>;
+    return <div></div>;
   }
 
   return (

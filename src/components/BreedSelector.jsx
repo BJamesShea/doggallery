@@ -26,7 +26,7 @@ const BreedSelector = ({ onBreedChange }) => {
   };
 
   return (
-    <div>
+    <div className="breedSelect">
       <label htmlFor="breed-selector">Select a dog breed: </label>
       <select id="breed-selector" value={selectedBreed} onChange={handleChange}>
         <option value="">--Choose breed--</option>

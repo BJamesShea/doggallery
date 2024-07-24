@@ -39,13 +39,10 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header
-        title="Dog Image Gallery"
-        text="Select a breed and generate images"
-      />
+    <div className="selectors-container">
+      <Header title="Doggo Emporium!" text="Welcome!" />
       <BreedSelector onBreedChange={handleBreedChange} />
-      <div>
+      <div className="numberBreed">
         <label htmlFor="numImages">Number of Images: </label>
         <select
           id="numImages"
