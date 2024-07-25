@@ -1,0 +1,18 @@
+1.	How many hours did it take you to complete this assessment? (Please keep try to keep track of how many hours you have spent working on each individual part of this assessment as best you can - an estimation is fine; we just want a rough idea.)
+Answer: Not crazy long, between 9 to 10 hours. Most of it was styling, the logic didnt take longer than 3 hours or so.
+
+
+2.	What online resources you have used? (My lectures, YouTube, Stack overflow etc.)
+Answer: I went back to look at our old lectures to set up the files properly, I used youtube for some of the fetching and I got ChatGPT to look over it for errors.
+
+3.	Did you need to ask any of your friends in solving the problems. (If yes, please mention name of the friend. They must be amongst your class fellows.)
+Answer: I looked at a few classmates styling for inspiration, but I didn't need any specific help from them.
+
+4.	Did you need to ask questions to any of your instructors? If so, how many questions did you ask (or how many help sessions did you require)?
+Answer: Nope.
+
+5.	Rate (subjectively) the difficulty of Making this all! from your own perspective, and whether you feel confident that you can solve a similar but different problem requiring some of the same techniques in the future now that you’ve completed this one.
+Answer: probably a 7 out of 10. While I find Ainne and Noman to be INCREDIBLE professors, I do feel in a way that semester 2 is formatted in an odd way. In my totally honest opinion, I don't think it's viable to learn JS and React in one semester. 
+I know it isn't as easy as simply adding another semester, but just my opinion on it. 
+
+I feel as though the class moves at a pace where I can keep up with it in my mind, and even code along, but if I'm tasked to do it myself I hit a pretty big roadblock. I guess I could always do more practice on my own time though. No one's perfect.
