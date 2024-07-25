@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <footer>
-        <p>© 2024 Doggo Emporium LLC</p>
+        <p>© 2024 Doggo Emporium LLC - Brandon Shea</p>
       </footer>
     </div>
   );
