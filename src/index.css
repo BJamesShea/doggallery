@@ -1,18 +1,21 @@
+/* Ensure the body takes up the full height of the viewport */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
+html,
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #292f33;
+  height: 100%;
+  margin: 0;
 }
 
 .app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding: 20px;
+  background-color: #292f33;
 }
 
 .header-container {
@@ -20,11 +23,23 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  border: 1px solid black;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 20px;
-  border-radius: 25px;
-  background-color: #568fb8;
+  background: linear-gradient(to right, #568fb8, #292f33);
+  border-radius: 15px;
+  color: #ffffff;
+}
+
+.header-container h1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.header-container p {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  max-width: 80%;
 }
 
 .imgGal {
@@ -55,26 +70,17 @@ body {
   border: 10px solid #d5d5d5;
 }
 
-.breedSelect,
-.numberBreed {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 20px 0;
+.footer-container {
+  margin-top: auto;
+  padding: 20px;
+  background: linear-gradient(to right, #568fb8, #292f33);
+  border-radius: 15px;
+  color: #ffffff;
+  text-align: center;
 }
 
-.btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #292f33;
-  cursor: pointer;
-  transition: 0.3s ease;
-  color: white;
-}
-
-.btn:hover {
-  background-color: #d5d5d5;
-  transition: 0.3s ease;
+.footer-container p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 300;
 }

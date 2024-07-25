@@ -1,9 +1,11 @@
+// App.js
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Button from "./components/Button";
 import BreedSelector from "./components/BreedSelector";
 import ImageGallery from "./components/ImageGallery";
+import Footer from "./components/Footer";
 
 function App() {
   const [selectedBreed, setSelectedBreed] = useState("");
@@ -58,10 +60,10 @@ function App() {
             </option>
           ))}
         </select>
-
         <Button onClick={handleGenerateClick} text="Generate" />
       </div>
       <ImageGallery imageUrls={imageUrls} />
+      <Footer />
     </div>
   );
 }
