@@ -1,7 +1,7 @@
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Button from "./components/Button";
-import React, { useState } from "react";
 import BreedSelector from "./components/BreedSelector";
 import ImageGallery from "./components/ImageGallery";
 
@@ -39,10 +39,13 @@ function App() {
   };
 
   return (
-    <div className="selectors-container">
-      <Header title="Doggo Emporium!" text="Welcome!" />
-      <BreedSelector onBreedChange={handleBreedChange} />
-      <div className="numberBreed">
+    <div className="app-container">
+      <div className="header-container">
+        <Header
+          title="Doggo Emporium!"
+          text="Select breed and number of images!"
+        />
+        <BreedSelector onBreedChange={handleBreedChange} />
         <label htmlFor="numImages">Number of Images: </label>
         <select
           id="numImages"
@@ -55,8 +58,9 @@ function App() {
             </option>
           ))}
         </select>
+
+        <Button onClick={handleGenerateClick} text="Generate" />
       </div>
-      <Button onClick={handleGenerateClick} text="Generate" />
       <ImageGallery imageUrls={imageUrls} />
     </div>
   );
